@@ -315,7 +315,7 @@ div.gallery ul.collections li a {
 }
 
 .subtitle-comment a  {
-	background: transparent url(../images/comments.png) no-repeat;
+	/*background: transparent url(../images/comments.png) no-repeat;*/
 	width: 40px;
 	height: 44px;
 	position: absolute;
