@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+<php>
+</php>
+    <head>
+        <meta charset="utf-8">
+        <title>我们结婚啦！！俞建龙 & 章雯雯 </title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="cleartype" content="on">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <!-- This script prevents links from opening in Mobile Safari. -->
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/respond.min.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/countdown.js"></script>
+    </head>
+    <body class="home">
+
+        
+<div class="container">
+    <div class="container-home">
+    
+        
+    <div class="header">
+        <div class="btn-collections">
+            <a class="ir" id='page_link' href="wedding-info-sx.html">^</a>
+        </div>
+        <h1 class="title"><a href="#">我们结婚啦！！</a></h1>
+        <p class="subtitle">俞建龙 & 章雯雯 </p>
+        <p>2014-11-15</p>
+        
+    </div>
+            <p class="subtitle-comment">
+        <a href="/create.php?ctl=create&act=wedding&id=888&sid=875&t=tag3"></a>
+        </p>
+            
+    </div> 
+
+</div>
+
+
+<script>
+function get_viewport_width() {
+    var width;
+    if (window.innerWidth != undefined) {   // all but IE 
+        width =  window.innerWidth;
+    } else if (document.documentElement != undefined) {     // IE
+        width = document.documentElement.clientWidth;
+    } 
+
+    // to support pc preview
+    if (document.body.clientWidth != undefined) {
+        if ( width > document.body.clientWidth) {
+            width = document.body.clientWidth;
+        }
+    }
+
+    return width;
+}
+
+function get_viewport_height() {
+    var height;
+    if (window.innerHeight != undefined) {
+        height =  window.innerHeight;
+    } else if (document.documentElement != undefined) {
+        height = document.documentElement.clientHeight;
+    }
+
+    return height;
+}
+
+$(function () {
+    var width = get_viewport_width();
+    var height = get_viewport_height();
+
+    if(height / width > 3) { // when Android browser initialized, window.innerHeight property might be incorrect
+        height = width * 488 / 320;
+    }
+    
+    // to support mobile
+    var pic_width = width;
+    var pic_height = height;
+    if (window.devicePixelRatio != undefined) {
+        pic_width = width * window.devicePixelRatio;
+        pic_height = height * window.devicePixelRatio;
+    }
+    var max_width = 1024;
+    pic_width = max_width;
+    pic_height = max_width * height / width;
+
+    var url = 'images/pic-1.jpg';//+ '&w=' + pic_width + '&h=' + pic_height
+    $('div.container').css({'background':'url("' + url + '") no-repeat scroll 0 0', 'background-size':'cover'});
+    $('div.container').css('height',height);
+
+
+    TargetDate = "";
+    TargetDate = TargetDate.replace(/\-/g, '/');
+    date_then = new Date(TargetDate);
+    date_now = new Date();
+    if(date_now < date_then) {
+        $('#countdown').countDown({
+            targetDate: {
+                'day':      date_then.getDate(),
+                'month':    date_then.getMonth() + 1,
+                'year':     date_then.getFullYear(),
+                'hour':     date_then.getHours(),
+                'min':      date_then.getMinutes(),
+                'sec':      date_then.getSeconds()
+            }
+        });
+    }else {
+        //$('#countdown').hide();
+        $('#countdown').countDown({
+            targetDate: {
+                'day':      date_then.getDate(),
+                'month':    date_then.getMonth() + 1,
+                'year':     date_then.getFullYear(),
+                'hour':     date_then.getHours(),
+                'min':      date_then.getMinutes(),
+                'sec':      date_then.getSeconds()
+            }
+        });
+        //$('#countdown-name').html('时间已过:');
+    }
+    
+});
+
+function enterpic(){
+    $("#page_link").fadeIn(1000);
+    $("#page_link").fadeOut(1500);
+}
+
+window.setInterval("enterpic()",1500);
+ </script>
+        
+     
+<script language="javascript" type="text/javascript">
+ 
+var contentModel = { "img_url": "http://code4happy.github.io/wedding/images/pic300.jpg",     "title": "我们结婚啦！！\r俞建龙 & 章雯雯 ",     "src": "时间：2014-11-15\r农历：九月二十三\r\n诚邀您的光临" };
+</script>
+
+<script language="JavaScript" src="js/share.js" type="text/javascript" ></script>
+    
+    </body>
+</html>
